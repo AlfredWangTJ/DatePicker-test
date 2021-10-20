@@ -26,13 +26,16 @@
             }
             var ctor = sap.m.DatePicker;
             var currdat = new Date();
+            console.log(currdat);
+            console.log(currdat.getFullYear);
+            console.log(currdat.getFullYear+3);
             if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
             this.DP = new ctor({
                 //Add default format and min Date - Alfred
                 valueFormat: "YYYY-MM-DD",
                 displayFormat: "YYYY/MM/DD",
                 minDate: currdat,
-                maxDate: new Date(currdat.getFullYear+3 , 12 , 31),
+                //maxDate: new Date(currdat.getFullYear+3 , 12 , 31),
                 //--
                 change: function () {
                     this.fireChanged();
