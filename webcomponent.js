@@ -27,6 +27,10 @@
             var ctor = sap.m.DatePicker;
             if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
             this.DP = new ctor({
+                //Add default format and min Date - Alfred
+                valueFormat: "YYYY-MM-DD",
+                minDate: new Date(),
+                //--
                 change: function () {
                     this.fireChanged();
                     this.dispatchEvent(new Event("onChange"));
