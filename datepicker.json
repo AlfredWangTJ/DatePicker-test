@@ -13,8 +13,8 @@
 			"kind": "main",
 			"tag": "nkappler-date-picker",
 			"url": "https://alfredwangtj.github.io/DatePicker-test/webcomponent.js",
-			"integrity": "sha256-sWuLStaaZuR98vEy8uud13pteOX8iEW0zujftQHQXAY=",
-			"ignoreIntegrity": true
+			"integrity": "sha256-IPKEjzX8/sIpe9nmdVgFn18dVaPvrKcuDKoJcTW2Qos=",
+			"ignoreIntegrity": false
 
 		},
 		{
@@ -22,7 +22,7 @@
 			"tag": "nkappler-datepicker-aps",
 			"url": "https://alfredwangtj.github.io/DatePicker-test/aps_webcomponent.js",
 			"integrity": "sha256-uaJTx2okAQ56WGDsld7kqbtPf+KI33wyDiC0rMloQss=",
-			"ignoreIntegrity": true
+			"ignoreIntegrity": false
 		}
 	],
 	"properties": {
