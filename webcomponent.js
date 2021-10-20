@@ -35,7 +35,7 @@
                 valueFormat: "YYYY-MM-DD",
                 displayFormat: "YYYY/MM/DD",
                 minDate: currdat,
-                //maxDate: new Date(currdat.getFullYear+3 , 12 , 31),
+                maxDate: new Date(2025 , 12 , 31),
                 //--
                 change: function () {
                     this.fireChanged();
