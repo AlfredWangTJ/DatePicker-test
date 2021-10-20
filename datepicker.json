@@ -14,7 +14,7 @@
 			"tag": "nkappler-date-picker",
 			"url": "https://alfredwangtj.github.io/DatePicker-test/webcomponent.js",
 			"integrity": "sha256-IPKEjzX8/sIpe9nmdVgFn18dVaPvrKcuDKoJcTW2Qos=",
-			"ignoreIntegrity": false
+			"ignoreIntegrity": true
 
 		},
 		{
