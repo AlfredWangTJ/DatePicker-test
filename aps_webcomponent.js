@@ -77,13 +77,6 @@
             this._shadowRoot.querySelector("#theme").checked = value
         }
 
-        get enablerange() {
-            return this._shadowRoot.querySelector("#range").checked;
-        }
-
-        set enablerange(value) {
-            this._shadowRoot.querySelector("#range").checked = value
-        }
     }
 
     customElements.define('nkappler-datepicker-aps', DatePickerAps);

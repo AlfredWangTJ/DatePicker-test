@@ -14,7 +14,7 @@
 			"tag": "nkappler-date-picker",
 			"url": "https://alfredwangtj.github.io/DatePicker-test/webcomponent.js",
 			"integrity": "sha256-AkzkFj008PVvI3klOteDOKD1HMc7ddpq//AizviGNoA=",
-			"ignoreIntegrity": false
+			"ignoreIntegrity": true
 
 		},
 		{
@@ -22,15 +22,11 @@
 			"tag": "nkappler-datepicker-aps",
 			"url": "https://alfredwangtj.github.io/DatePicker-test/aps_webcomponent.js",
 			"integrity": "sha256-uaJTx2okAQ56WGDsld7kqbtPf+KI33wyDiC0rMloQss=",
-			"ignoreIntegrity": false
+			"ignoreIntegrity": true
 		}
 	],
 	"properties": {
 		"dateVal": {
-			"type": "Date",
-			"description": "default date"
-		},
-		"secondDateVal": {
 			"type": "Date",
 			"description": "default date"
 		},
@@ -73,29 +69,6 @@
 				}
 			],
 			"body": "this.dateVal = dv;"
-		},
-		"getSecondDateVal": {
-			"returnType": "Date",
-			"description": "get the end date. (returns undefined if range selection is not enabled)",
-			"parameters": [],
-			"body": " var x = new Date(); x = undefined; if (this.enablerange) { return this.secondDateVal; } else { return x; }"
-		},
-		"setSecondDateVal": {
-			"description": "set the end date. (has no effect if range selection is not enabled)",
-			"parameters": [
-				{
-					"name": "dv",
-					"type": "Date",
-					"description": "The new date"
-				}
-			],
-			"body": "this.secondDateVal = dv;"
-		},
-		"isRangeEnabled": {
-			"description": "Returns whether range selection is enabled",
-			"parameters": [],
-			"body": "return this.enablerange;",
-			"returnType": "boolean"
 		}
 	},
 	"events": {
