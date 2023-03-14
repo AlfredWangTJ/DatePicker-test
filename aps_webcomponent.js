@@ -4,9 +4,6 @@
     class DatePickerAps extends HTMLElement {
         constructor() {
             super();
-            this._shadowRoot = this.attachShadow({ mode: 'open' });
-            ["select"].forEach(id =>
-                this._shadowRoot.getElementById(id).addEventListener("change", this._submit.bind(this));
         }
 
         _submit(e) {
