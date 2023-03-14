@@ -7,18 +7,8 @@
         constructor() {
             super();
             this.init();
-            this.checkForUpdates();
         }
         
-        async checkForUpdates() {
-            try {
-                const contribution = await (await fetch("https://alfredwangtj.github.io/DatePicker-test/datepicker.json")).json();
-                if (contribution.version > version) {
-                    console.log("A newer version of the Datepicker Custom Widget is available. Please contact your system administrator");
-                }
-            } catch (error) { }
-        }
-
         init() {
             if (this.children.length === 2) return; //constructor called during drag+drop
             if (!this.querySelector("link")) {
@@ -26,13 +16,12 @@
             }
             var ctor = sap.m.DateTimePicker;
             var currdat = new Date();
-            //if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
             this.DP = new ctor({
                 //Add default format and min Date - Alfred
-                //valueFormat: "YYYY-MM-DD",
-                //displayFormat: "YYYY/MM/DD",
-                //minDate: currdat,
-                //maxDate: new Date(currdat.getFullYear()+3 , 11 , 31),
+                minDate: currdat,
+                formatOptions: {
+					'pattern': 'M/d/yy h:mm'
+				},
                 //--
                 change: function () {
                     this.fireChanged();
@@ -44,7 +33,6 @@
 
         fireChanged() {
             var properties = { dateVal: this.DP.getDateValue() };
-            //if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: properties
@@ -61,12 +49,6 @@
         set format(value) {
             if (!this.DP) return;
             this.DP.setDisplayFormat(value);
-        }
-
-        set darktheme(value) {
-            this.querySelector("link").setAttribute("href", "https://alfredwangtj.github.io/DatePicker-test/" +
-                (value ? "dark.css" : "light.css")
-            );
         }
 
     }
