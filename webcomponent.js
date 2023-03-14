@@ -18,10 +18,7 @@
             var currdat = new Date();
             this.DP = new ctor({
                 //Add default format and min Date - Alfred
-                minDate: currdat,
-                formatOptions: {
-					pattern: M/d/yy h:mm
-				},
+
                 //--
                 change: function () {
                     this.fireChanged();
