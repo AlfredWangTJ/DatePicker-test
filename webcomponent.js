@@ -24,7 +24,7 @@
             if (!this.querySelector("link")) {
                 this.appendChild(tmpl.content.cloneNode(true));
             }
-            var ctor = m.DateTimePicker;
+            var ctor = sap.m.DateTimePicker;
             var currdat = new Date();
             //if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
             this.DP = new ctor({
