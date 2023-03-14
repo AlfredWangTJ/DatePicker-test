@@ -29,8 +29,8 @@
             //if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
             this.DP = new ctor({
                 //Add default format and min Date - Alfred
-                valueFormat: "YYYY-MM-DD",
-                displayFormat: "YYYY/MM/DD",
+                //valueFormat: "YYYY-MM-DD",
+                //displayFormat: "YYYY/MM/DD",
                 //minDate: currdat,
                 //maxDate: new Date(currdat.getFullYear()+3 , 11 , 31),
                 //--
@@ -44,7 +44,7 @@
 
         fireChanged() {
             var properties = { dateVal: this.DP.getDateValue() };
-            if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
+            //if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: properties
@@ -58,12 +58,6 @@
             this.DP.setDateValue(value);
         }
 
-        set secondDateVal(value) {
-            if (value == undefined || !this.DP || !this._enablerange) return;
-            if (typeof (value) === "string") value = new Date(value);
-            this.DP.setSecondDateValue(value);
-        }
-
         set format(value) {
             if (!this.DP) return;
             this.DP.setDisplayFormat(value);
@@ -75,12 +69,6 @@
             );
         }
 
-        set enablerange(value) {
-            if (value == undefined || !this.DP) return;
-            this._enablerange = value;
-            this.DP.destroy();
-            this.init();
-        }
     }
 
     customElements.define('nkappler-date-picker', DatePicker);
