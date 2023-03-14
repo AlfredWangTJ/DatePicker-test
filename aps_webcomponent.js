@@ -6,7 +6,7 @@
             super();
             this._shadowRoot = this.attachShadow({ mode: 'open' });
             ["select"].forEach(id =>
-                this._shadowRoot.getElementById(id).addEventListener("change", this._submit.bind(this)));
+                this._shadowRoot.getElementById(id).addEventListener("change", this._submit.bind(this));
         }
 
         _submit(e) {
